@@ -22,7 +22,7 @@ eval qq{
   1;
 };
 
-'' eq $@ or BAIL_OUT( "Cannot create Moo class '$class' dynamically!" );
+'' eq $@ or BAIL_OUT( "Cannot create Moo class '$class' dynamically: $@" );
 
 is __PACKAGE__, 'main', "current package is 'main'";
 ok $class->does( $role ), "class '$class' consumes role '$role'";

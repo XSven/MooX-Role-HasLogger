@@ -15,7 +15,6 @@ on 'runtime' => sub {
 
 on 'test' => sub {
   requires 'Log::Log4perl' => '0';
-  requires 'Test::Lib'     => '0';
   requires 'Test::More'    => '0';
 };
 
