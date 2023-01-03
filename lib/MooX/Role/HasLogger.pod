@@ -1,0 +1,48 @@
+=pod
+
+=head1 NAME
+
+MooX::Role::HasLogger - Moo role that provides a logger attribute
+
+=head1 SYNOPSIS
+
+  package Foo;
+
+  use Moo;
+
+  with qw( MooX::Role::HasLogger );
+
+  sub main;
+
+  1;
+
+=head1 DESCRIPTION
+
+This role declares a C<logger> attribute for the class to be composed into.
+
+=head1 SEE ALSO
+ 
+=over 2
+ 
+=item *
+ 
+L<MooX::Role::Logger>
+ 
+=item *
+ 
+L<MooX::Log::Any>
+ 
+=back
+
+=head1 AUTHOR
+
+Sven Willenbuecher <sven.willenbuecher@gmx.de>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2023 by Sven Willenbuecher.
+
+This is free software; you can redistribute it and/or modify it under the
+same terms as the Perl 5 programming language system itself.
+
+=cut
