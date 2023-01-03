@@ -13,6 +13,7 @@ eval qq{
   package $class;
 
   use Moo qw( with );
+  use namespace::clean;
 
   with qw( $role );
 

@@ -8,9 +8,10 @@ on 'configure' => sub {
 };
 
 on 'runtime' => sub {
-  requires 'Log::Any'   => '0';
-  requires 'Moo'        => '0';
-  requires 'Type::Tiny' => '0';
+  requires 'Log::Any'         => '0';
+  requires 'Moo'              => '0';
+  requires 'Type::Tiny'       => '0';
+  requires 'namespace::clean' => '0';
 };
 
 on 'test' => sub {

@@ -12,6 +12,7 @@ eval qq{
 
   use Log::Log4perl qw();
   use Moo           qw( with );
+  use namespace::clean;
 
   with qw( $role );
 

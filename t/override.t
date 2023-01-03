@@ -14,6 +14,7 @@ eval qq{
   use Moo                          qw( has with );
   use Types::Standard              qw( HasMethods );
   use MooX::Role::HasLogger::Types qw( Logger );
+  use namespace::clean;
 
   with qw( $role );
 
