@@ -11,7 +11,8 @@ eval qq{
   package $class;
 
   use Log::Log4perl qw();
-  use Moo           qw( with );
+  use Moo;
+  use MooX::TypeTiny; 
   use namespace::clean;
 
   with qw( $role );

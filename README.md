@@ -7,7 +7,8 @@ MooX::Role::HasLogger - Moo role that provides a logger attribute
 ```perl
 package Foo;
 
-use Moo qw( with );
+use Moo;
+use MooX::TypeTiny;
 use namespace::clean;
 
 with qw( MooX::Role::HasLogger );

@@ -11,7 +11,8 @@ my $role  = 'MooX::Role::HasLogger';
 eval qq{
   package $class;
 
-  use Moo                          qw( has with );
+  use Moo;
+  use MooX::TypeTiny;
   use Types::Standard              qw( HasMethods );
   use MooX::Role::HasLogger::Types qw( Logger );
   use namespace::clean;

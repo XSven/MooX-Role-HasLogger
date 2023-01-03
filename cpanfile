@@ -10,6 +10,7 @@ on 'configure' => sub {
 on 'runtime' => sub {
   requires 'Log::Any'         => '0';
   requires 'Moo'              => '0';
+  requires 'MooX::TypeTiny'   => '0';
   requires 'Type::Tiny'       => '0';
   requires 'namespace::clean' => '0';
 };
