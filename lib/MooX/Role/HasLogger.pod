@@ -25,10 +25,9 @@ MooX::Role::HasLogger - Moo role that provides a logger attribute
 
 This L<Moo::Role> based role provides a C<logger> attribute to the consuming
 class.  The attribute is read-only and its value is grabbed lazily. The type
-library L<MooX::Role::HasLogger::Types> exports the C<Logger> type constraint
-that defines the interface of the attribute. The C<build_logger()> builder
-method returns a L<Log::Any> logger object with the consuming class as its
-category.
+library L<MooX::Role::HasLogger::Types> exports the C<Logger> type that defines
+the interface of the attribute. The C<build_logger()> builder method returns a
+L<Log::Any> logger object with the consuming class as its category.
 
 =head1 SEE ALSO
 
