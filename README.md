@@ -53,33 +53,20 @@ sub build_logger {
 
 shows
 
-- -
-
-    how to override the `isa` option of the `logger` attribute using the `+`
-    notation.
-
-- -
-
-    how to extend the `Logger` type using a [Type::Tiny](https://metacpan.org/pod/Type%3A%3ATiny) intersection. Now a
-    logger has to be an object of a class that implements the `Logger` type
-    methods and additionally the `f` suffixed log methods.
-
-- -
-
-    how to override the `build_logger()` builder method. This time the builder
-    returns a [Log::Any](https://metacpan.org/pod/Log%3A%3AAny) logger object with the consuming class as its category
-    and with a default adapter that refers to the [Log::Any::Adapter::Stderr](https://metacpan.org/pod/Log%3A%3AAny%3A%3AAdapter%3A%3AStderr)
-    adapter class.
+- how to override the `isa` option of the `logger` attribute using the `+`
+notation.
+- how to extend the `Logger` type using a [Type::Tiny](https://metacpan.org/pod/Type%3A%3ATiny) intersection. Now a
+logger has to be an object of a class that implements the `Logger` type
+methods and additionally the `f` suffixed log methods.
+- how to override the `build_logger()` builder method. This time the builder
+returns a [Log::Any](https://metacpan.org/pod/Log%3A%3AAny) logger object with the consuming class as its category
+and with a default adapter that refers to the [Log::Any::Adapter::Stderr](https://metacpan.org/pod/Log%3A%3AAny%3A%3AAdapter%3A%3AStderr)
+adapter class.
 
 # SEE ALSO
 
-- -
-
-    [MooX::Role::Logger](https://metacpan.org/pod/MooX%3A%3ARole%3A%3ALogger)
-
-- -
-
-    [MooX::Log::Any](https://metacpan.org/pod/MooX%3A%3ALog%3A%3AAny)
+- [MooX::Role::Logger](https://metacpan.org/pod/MooX%3A%3ARole%3A%3ALogger)
+- [MooX::Log::Any](https://metacpan.org/pod/MooX%3A%3ALog%3A%3AAny)
 
 # AUTHOR
 

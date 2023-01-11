@@ -53,18 +53,18 @@ shows
 
 =over 2
 
-=item -
+=item *
 
 how to override the C<isa> option of the C<logger> attribute using the C<+>
 notation.
 
-=item -
+=item *
 
 how to extend the C<Logger> type using a L<Type::Tiny> intersection. Now a
 logger has to be an object of a class that implements the C<Logger> type
 methods and additionally the C<f> suffixed log methods.
 
-=item -
+=item *
 
 how to override the C<build_logger()> builder method. This time the builder
 returns a L<Log::Any> logger object with the consuming class as its category
@@ -77,11 +77,11 @@ adapter class.
 
 =over 2
 
-=item -
+=item *
 
 L<MooX::Role::Logger>
 
-=item -
+=item *
 
 L<MooX::Log::Any>
 
