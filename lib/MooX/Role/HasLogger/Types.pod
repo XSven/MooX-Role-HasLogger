@@ -10,8 +10,8 @@ This type library exports the C<Logger> type. This type inherits from the
 C<HasMethods> type that is a parameterized type defined in the
 L<Types::Standard> type library. The parameter is the list of methods that a
 class has to implement to conform to the C<Logger> type. The list contains the
-methods C<trace()>, C<debug()>, C<info()>, C<warn()>, C<error()>, C<fatal>, and
-the corresponding "is_" prefixed log level detection methods.
+log methods C<trace()>, C<debug()>, C<info()>, C<warn()>, C<error()>, C<fatal>,
+and the corresponding C<is_> prefixed log level detection methods.
 
 =head1 AUTHOR
 
