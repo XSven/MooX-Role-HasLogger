@@ -2,7 +2,7 @@
 use strict; use warnings;
 #>>>
 
-use Test::More import => [ qw( BAIL_OUT is ok ) ], tests => 5;
+use Test::More import => [ qw( is ok ) ], tests => 6;
 use Log::Any::Test;
 use Log::Any qw( $log_buffer );
 
@@ -21,7 +21,7 @@ eval qq{
   1;
 };
 
-'' eq $@ or BAIL_OUT( "Cannot create Moo class '$class' dynamically: $@" );
+is $@, '', "Moo class '$class' created dynamically" or die "\n";
 
 is __PACKAGE__, 'main', "current package is 'main'";
 ok $class->does( $role ), "class '$class' consumes role '$role'";

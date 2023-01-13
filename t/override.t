@@ -2,7 +2,7 @@
 use strict; use warnings;
 #>>>
 
-use Test::More import => [ qw( BAIL_OUT is isa_ok ok ) ], tests => 4;
+use Test::More import => [ qw( is isa_ok ok ) ], tests => 5;
 
 my $class = 'Foo';
 my $role  = 'MooX::Role::HasLogger';
@@ -24,11 +24,11 @@ eval qq{
   sub build_logger {
     return Log::Log4perl->get_logger(ref shift);
   }
-
+ 
   1;
 };
 
-'' eq $@ or BAIL_OUT( "Cannot create Moo class '$class' dynamically: $@" );
+is $@, '', "Moo class '$class' created dynamically" or die "\n";
 
 is __PACKAGE__, 'main', "current package is 'main'";
 ok $class->does( $role ), "class '$class' consumes role '$role'";
