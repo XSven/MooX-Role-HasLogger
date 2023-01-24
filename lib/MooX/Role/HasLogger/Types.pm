@@ -4,6 +4,8 @@ use strict; use warnings;
 
 package MooX::Role::HasLogger::Types;
 
+our $VERSION = '0.001';
+
 use Type::Library -base, -declare => qw( Logger );
 use Types::Standard qw( HasMethods );
 use Type::Utils     qw( declare as );
