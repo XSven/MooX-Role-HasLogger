@@ -37,7 +37,7 @@ jobs:
     - name: Install Modules
       run: |
         cpanm -v
-        cpanm --installdeps --notest .
+        cpanm --installdeps --with-configure --with-develop --with-test --notest .
 
     - name: Show Errors on Windows
       if:  ${{ failure() && matrix.runner == 'windows-latest' }}
