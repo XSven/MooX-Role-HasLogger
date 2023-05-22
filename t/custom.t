@@ -18,7 +18,7 @@ eval qq{
   with qw( $role );
 
   sub build_logger {
-    return Log::Log4perl->get_logger(ref shift);
+    return Log::Log4perl->get_logger( ref shift );
   }
 
   1;

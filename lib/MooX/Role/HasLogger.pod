@@ -14,7 +14,7 @@ MooX::Role::HasLogger - Moo role that provides a logger attribute
 
   with qw( MooX::Role::HasLogger );
 
-  sub bar {
+  sub foo {
     my ( $self ) = @_;
     $self->logger->info( 'log something' );
   }
@@ -29,9 +29,9 @@ library L<MooX::Role::HasLogger::Types> exports the C<Logger> type that defines
 the interface of the attribute. The C<build_logger()> builder method returns a
 L<Log::Any> logger object with the consuming class as its category.
 
-=head1 EXAMPLE
+=head1 EXAMPLES
 
-This extended example
+The first example
 
   package Bar;
 
@@ -74,6 +74,50 @@ and with a default adapter that refers to the L<Log::Any::Adapter::Stderr>
 adapter class.
 
 =back
+
+As of version C<0.002> the previous C<HasMethods> based override of the
+C<logger> attribute can be replaced with a L<Type::Tiny::Duck> based override
+
+  has '+logger' => (
+    isa => Type::Tiny::Duck->new(
+             name    => 'ExtendedLogger',
+             methods => [ \@{ Logger->methods }, qw( tracef debugf infof warnf errorf fatalf ) ]
+           )
+  );
+
+or the new C<LoggerAny> type can be used
+
+  use MooX::Role::HasLogger::Types qw( LoggerAny );
+  has '+logger' => ( isa => LoggerAny );
+
+This new type requires that a logger object has to implement the C<category()>
+getter method too.
+
+The second example 
+
+  package Baz;
+
+  use Moo;
+  use MooX::TypeTiny;
+  use MooX::Role::HasLogger::Types qw( Logger );
+  use namespace::clean;
+
+  with qw( MooX::Role::HasLogger );
+
+  has '+logger' => ( handles => Logger->methods );
+
+  sub baz {
+    my ( $self ) = @_;
+    # delegation
+    $self->info( 'log something' );
+  }
+
+  1;
+
+shows how to override the C<handles> option of the C<logger> attribute using
+the C<+> notation. The delegating class C<Baz> can now use the methods provided
+by the C<logger> (the delegatee) directly. If you prefer to work with an
+extended interface replace the C<Logger> type with the C<LoggerAny> type.
 
 =head1 SEE ALSO
 

@@ -17,11 +17,11 @@ my %WriteMakefileArgs = (
     provides    => {
       'MooX::Role::HasLogger' => {
         file    => 'lib/MooX/Role/HasLogger.pm',
-        version => '0.001002',
+        version => '0.002',
       },
       'MooX::Role::HasLogger::Types' => {
         file    => 'lib/MooX/Role/HasLogger/Types.pm',
-        version => '0.001002',
+        version => '0.002',
       },
     },
     resources => {

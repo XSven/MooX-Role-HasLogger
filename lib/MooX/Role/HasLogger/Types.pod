@@ -4,14 +4,21 @@
 
 MooX::Role::HasLogger::Types - Type library that exports the Logger type
 
+=head1 SYNOPSIS
+
+  use MooX::Role::HasLogger::Types qw( Logger LoggerAny );
+
 =head1 DESCRIPTION
 
-This type library exports the C<Logger> type. This type inherits from the
-C<HasMethods> type that is a parameterized type defined in the
-L<Types::Standard> type library. The parameter is the list of methods that a
-class has to implement to conform to the C<Logger> type. The list contains the
-log methods C<trace()>, C<debug()>, C<info()>, C<warn()>, C<error()>, C<fatal>,
-and the corresponding C<is_> prefixed log level detection methods.
+This type library exports the C<Logger> type. This type is a
+L<Type::Tiny::Duck> instance. It encapsulates the list of methods that a class
+has to implement to conform to the C<Logger> type. The list contains the log
+methods C<trace()>, C<debug()>, C<info()>, C<warn()>, C<error()>, C<fatal>, and
+the corresponding C<is_> prefixed log level detection methods.
+
+As of version C<0.002> the library exports the C<LoggerAny> type that
+extends the C<Logger> type. The new type contains the additional getter
+method C<category()>, as well as the C<f> suffixed log methods.
 
 =head1 AUTHOR
 

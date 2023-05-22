@@ -22,7 +22,7 @@ eval qq{
   has '+logger' => ( isa => ( Logger ) & ( HasMethods [ qw( category ) ] ) );
 
   sub build_logger {
-    return Log::Log4perl->get_logger(ref shift);
+    return Log::Log4perl->get_logger( ref shift );
   }
  
   1;

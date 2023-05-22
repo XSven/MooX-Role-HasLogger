@@ -1,5 +1,10 @@
 Release history for MooX-Role-HasLogger
 
+0.002     2023-05-22
+          - use Type::Tiny::Duck instead of HasMethods
+          - show by example how to setup delegation
+          - introduce the LoggerAny type that extends the Logger type
+
 0.001002  2023-04-04
           - set minimum perl version  
           - update prerequisites

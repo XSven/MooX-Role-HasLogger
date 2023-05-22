@@ -11,5 +11,8 @@ MANIFEST			This list of files
 README
 t/custom.t
 t/default.t
+t/delegation.t
 t/override.t
-t/override_log_any_logger.t
+t/override_log_any_logger_Duck.t
+t/override_log_any_logger_HasMethods.t
+t/override_log_any_logger_LoggerAny.t
